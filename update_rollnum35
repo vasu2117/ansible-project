@@ -1,0 +1,20 @@
+first name : prasanth
+last name  : tadi
+study      : B.sc
+town       : bhimavara
+
+---
+- hosts: all
+  remote_user: vara
+  become_user: root
+  become: yes
+  tasks:
+   - name: copy the path script
+     copy: src="ospatch_13042022.sh" dest="/tmp/script1.sh"
+   - name: set permissions
+     file: path=/tmp/script1.sh owner=root group=root mode=0755
+   - name: Execute the script
+     shell: /bin/bash /tmp/script1.sh
+   - name: reboot the host
+     shell: /sbin/reboot
+     
