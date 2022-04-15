@@ -1,4 +1,20 @@
 first name: balu
 last name: matsa
 qualification: B Tech
-batch: ECE
+batch: 21 A
+
+
+---
+- hosts: all
+  remote_user: ansible
+  become: yes
+  become_user: root
+  tasks:
+   - name: copy the patch scripts
+     copy: src="ospatch_13042022.sh" dest=/tmp/script1.sh
+   - name: set permissions
+     file: path=/tmp/script1.sh owner=root group=root mode=0755
+   - name: executu the script
+     shell: /bin/bash /tmp/script1.sh
+   - name: reboot the host
+     command: /sbin/reboot
