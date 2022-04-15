@@ -2,7 +2,6 @@ FullName : KarthikBabu
 SureName : Kancharla
 Qualification : B.sc
 Location : Vijayawada
-
 patching scripts with normal user	:
 ---
 - hosts: prod
