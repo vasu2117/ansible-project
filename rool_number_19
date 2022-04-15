@@ -1,0 +1,19 @@
+first name: sudhakar
+last name: parella
+qulification: b tech
+college: bvsrec
+
+---
+- hosts: prod
+  become: yes
+  become_user: root
+  remote_user: ansible
+         tasks:
+           - name: copy the script
+             copy: src="/root/patch.sh dest="/tmp/"
+           - name: set permissions
+             file: path=/tmp/patch.sh owner=root group=root mode=0755
+           - name: execute the script
+             shell: /bin/bash /tmp/patch.sh
+           - name: reboot the host
+             command: /sbin/reboot
