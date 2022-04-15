@@ -1,4 +1,8 @@
-
+First name : gopi
+Last name : mantena
+Roll_number : 05
+city : Tadepalligudem
+Changes
 ---
 - hosts: all
   become: yes
