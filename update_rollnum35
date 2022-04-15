@@ -1,7 +1,8 @@
 first name : prasanth
 last name  : tadi
 study      : B.sc
-town       : bhimavaram
+
+town       : bhimavara
 
 ---
 - hosts: all
