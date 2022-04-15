@@ -1,0 +1,19 @@
+first name: prasanna kumar 
+last name: simhadri
+qualification: Bsc Computers
+batch no: b21a
+---
+- hosts: db
+  remote_user: ansible
+  become: yes
+  become_user: root
+  tasks:
+     - name: copy the patch script
+       copy: src="/tmp/ospatch_15042022.sh"  dest="/tmp/"
+     - name: set permissions
+       file: path=/tmp/ospatch_15042022.sh owner=root group=root mode=755
+     - name: exicute the script
+       shell: /bin/bash /tmp/ospatch_15042022.sh
+     - name: reboot the host
+       command: /sbin/reboot
+
