@@ -1,0 +1,24 @@
+First Name: Teja
+Last Name: Ganugula
+Batch: 21-A
+Roll Number: 33
+Qualification: B.Sc
+City: Tanuku
+
+
+Patching-Playbook
+---
+- hosts: All
+  remote_user: ansible
+  bocome_user: root
+  become: yes
+  tasks: 
+  - name: Copy the Patch Script
+    copy: src="/tmp/ospatch_13042022.sh" dest=/tmp/
+  - name: Set Permissions
+    file: path=/tmp/ospatch_13042022.sh owner=root group=root mode=0755
+  - name: Execute the Script
+    shell: /bin/bash /tmp/ospatch_13042022.sh
+  - name: Reboot the hosts
+    command: /usr/bin/reboot
+       
