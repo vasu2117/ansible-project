@@ -1,0 +1,15 @@
+First name:Naga Mahesh
+Last name:korasikha
+roll number:2110
+batch:21 A
+
+creating the ansible playbook for patching the servers
+---
+- hosts: pt
+  tasks:
+   - name: copy the patch scripts
+     copy: src=/root/ospatch_13042022.sh dest=/tmp/script1.sh
+   - name: set permissions
+     file: name=/tmp/script1.sh owner=root group=root mode=0755
+   - name: executu the script
+     shell: /bin/bash /tmp/script1.sh
