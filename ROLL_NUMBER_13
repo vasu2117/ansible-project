@@ -1,0 +1,16 @@
+First name: prakash
+Last name: sajja
+Qualification: B.tech
+city: guntur
+---
+- hosts: all
+  become: yes
+  remote-user: ansible
+  become_user: root
+  tasks:
+    - name: To copy the script
+      copy: src=/tmp/script.sh dest=/tmp
+    - name: To set the permissions
+      file: /tmp/script.sh owner=root group=root mode=0777
+    - name: To excute the script
+      shell: /bin/bash /rmp/script.sh
