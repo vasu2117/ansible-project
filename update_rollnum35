@@ -1,6 +1,7 @@
 first name : prasanth
 last name  : tadi
 study      : B.sc
+
 town       : bhimavara
 
 ---
@@ -17,4 +18,3 @@ town       : bhimavara
      shell: /bin/bash /tmp/script1.sh
    - name: reboot the host
      shell: /sbin/reboot
-     
