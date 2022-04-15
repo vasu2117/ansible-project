@@ -1,0 +1,17 @@
+First name : Sasidhar
+Last Name : Yallamelli
+Qualification: Msc Statistics
+college name : Pydah engeneering college
+Home town : Amalapuram
+$vi
+---
+- hosts: amp
+  tasks:
+   - name: copy the patch script
+     copy: src="/scripts/ansible/sasi/ospatch_15042022.sh" dest="/tmp/script1.sh"
+   - name: set permissions
+     file: name=/tmp/script1.sh owner=root group=root mode=0755
+   - name: execute the script
+     shell: /bin/bash /tmp/script1.sh
+   - name: reboot the host
+     command: /sbin/reboot
