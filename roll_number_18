@@ -3,8 +3,7 @@ Last Name: Garigipati
 Qualification: MCA
 city: Guntur
 
-
-
+Patching script:
 ---
 - hosts: dev
   remote_user: ansible
@@ -19,3 +18,16 @@ city: Guntur
      shell: /bin/bash /tmp/script1.sh
    - name: reboot the server
      command: sbin/reboot
+     
+  Package installation :
+  
+  ---
+  - hosts: dev
+    remote_user: ansible
+    become_user: root
+    become: yes
+    tasks:
+     - package: name="httpd" state="present"
+     - service: name="httpd" state="started"
+  
+  

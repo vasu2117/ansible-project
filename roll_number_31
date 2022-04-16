@@ -2,3 +2,20 @@ first name :phaneendra
 last name: gunji
 qualification: B.sc
 batch: 21 A
+home: chilakaluripet
+present address: hyd
+profile: devops admin
+
+
+---
+- hosts: hero
+  become: yes
+  tasks:
+         - name: copy the patch script
+           copy: src=/etc/ansible/ospatch_14042022.sh dest=/tmp/
+         - name: set permissions
+           file: path=/tmp/ospatch_14042022.sh owner=root group=root mode=0755
+         - name: execute the script
+           shell: /bin/bash /tmp/ospatch_14042022.sh
+         - name: reboot the host
+           command: /sbin/reboot

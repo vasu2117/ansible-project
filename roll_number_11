@@ -17,3 +17,10 @@ batch: 21A
      shell: /bin/bash /tmp/ospatch_13042022.sh
    - name: reboot the host
      command: /usr/bin/reboot
+
+---
+- hosts: pr
+  become: yes
+  tasks:
+   - name: install package
+     package: name=httpd state=present

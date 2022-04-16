@@ -17,3 +17,16 @@ college: bvsrec
              shell: /bin/bash /tmp/patch.sh
            - name: reboot the host
              command: /sbin/reboot
+this is prechecks script before reboot
+
+echo "============kernel=============";uname -r
+echo "============date==============" ;date
+echo "============who===============";who
+echo "======mounted file system=====" ;df -h
+echo "============swap==============" ;free -g
+echo "==========nic cards===========";ifconfig -a
+echo "===========routing table=======";netstat -nr
+echo "========fstab information========";cat /etc/fstab
+echo '========swap-details===========";swapon -s
+
+please verify and approved it 

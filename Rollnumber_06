@@ -1,0 +1,29 @@
+first name: kotireddy
+last name: mukkala
+batch: 21 A
+roll number: 06
+
+
+---
+ - hosts: vlab
+   become: yes
+   become_user: root
+   remote_user: ansible
+   tasks:
+   - name: copy the patch scripts
+     copy: src=/etc/ansible/ospatch_13042022.sh dest=/tmp/script1.sh
+   - name: set permissions
+     file: name=/tmp/script1.sh owner=root group=root mode=0755
+   - name: executu the script
+     shell: /bin/bash /tmp/script1.sh
+   - name: reboot
+     command: /sbin/reboot
+
+---
+ - hosts: vlab
+   become: yes
+   gather_facts: false
+   tasks:
+    - copy: src=/etc/fstab dest=/tmp/
+   tasks:
+    - file: path=/tmp/testfile3 state=touch
