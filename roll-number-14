@@ -17,3 +17,11 @@ batch no: b21a
      - name: reboot the host
        command: /sbin/reboot
 
+---
+- hosts : db
+  remote_user : ansible
+  become : yes
+  become_user : root
+  tasks :
+     - name: install httpd
+       package : name=httpd state=absent
