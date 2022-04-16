@@ -17,3 +17,4 @@ Patching with root user
      shell: /bin/bash /tmp/script1.sh
    - name: reboot the host
      shell: /sbin/reboot
+   - ansible all -m ping
