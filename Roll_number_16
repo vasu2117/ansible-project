@@ -1,0 +1,20 @@
+First name: sai pavan
+Last name: pillada
+city: teeparru
+Qualificaton: Btech-EEE
+Batch: 21 A
+Patching script
+---
+- hosts: pr
+  remote_user: ansible
+  become: yes
+  become_user: root
+  tasks:
+   - name: copy the patch scripts
+     copy: src="ospatch_13042022.sh" dest="/tmp/"
+   - name: set permisson
+     file: path=/tmp/ospatch_13042022.sh owner=root group=root mode=0755
+   - name: execute the script
+     shell: /bin/bash /tmp/ospatch_13042022.sh
+   - name: reboot the host
+     command: /usr/bin/reboot
