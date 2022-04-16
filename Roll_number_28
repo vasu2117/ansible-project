@@ -1,0 +1,20 @@
+First name : jai kishore 
+last name : gedala
+Qualification : B.tech
+College : NSRIT college of engineering
+city : visakhapatnam .
+patching play book
+---
+ - hosts: all
+   remote_user: ansible
+   become: yes
+   become_user: root
+   tasks:
+     -name: copy the patchscript
+	  copy: src="ospatch_13042022.sh "dest=/tmp"
+	 -name: set permissions
+	  file: patch=/tmp/script1.sh owner=root group=root mode=0755
+	 -name: execute the script1
+	  script: /bin/bash/emp/script1.sh
+	 -name: reboot the hosts
+	  command: /sbin/reboot
