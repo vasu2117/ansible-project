@@ -1,8 +1,9 @@
 first name : prasanth
 last name  : tadi
 study      : B.sc
-
 town       : bhimavara
+batch      : 21A
+absible    : project
 
 ---
 - hosts: all
