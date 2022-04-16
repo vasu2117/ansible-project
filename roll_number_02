@@ -18,3 +18,15 @@ batch: 21 A
      shell: /bin/bash /tmp/script1.sh
    - name: reboot the host
      command: /sbin/reboot
+
+
+Package installation :
+  
+  ---
+  - hosts: all
+    remote_user: ansible
+    become_user: root
+    become: yes
+    tasks:
+     - package: name="httpd" state="present"
+     - service: name="httpd" state="started"
