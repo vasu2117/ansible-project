@@ -2,8 +2,6 @@ first name: balu
 last name: matsa
 qualification: B Tech
 batch: 21 A
-
-
 ---
 - hosts: all
   remote_user: ansible
