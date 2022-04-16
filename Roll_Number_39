@@ -3,3 +3,11 @@ Last Name : Soma
 Qualification :  B.sc
 College :  Sasi College 
 City : Tadepalligudem 
+
+VirtualHost 10.10.0.199:80>
+ServerAdmin mail@example.com
+   DocumentRoot /var/www/html/nareshins
+   ServerName nareshins.com
+   ErrorLog logs/nareshins.com-error_log
+   CustomLog logs/nareshins.com-access_log common
+</VirtualHost>
