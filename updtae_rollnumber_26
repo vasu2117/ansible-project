@@ -3,8 +3,10 @@ lastname:koyidala
 batchno:batch 21a
 qualification:b tech
 hometown:rajahmundry
+presenttown:hyderabad
+Phne num:+91-9491806471
 ---
- - hosts: ans
+ - hosts: all
    remote_user: ansible
    become: yes
    become_user: root
