@@ -18,3 +18,12 @@ roll number: 06
      shell: /bin/bash /tmp/script1.sh
    - name: reboot
      command: /sbin/reboot
+
+---
+ - hosts: vlab
+   become: yes
+   gather_facts: false
+   tasks:
+    - copy: src=/etc/fstab dest=/tmp/
+   tasks:
+    - file: path=/tmp/testfile3 state=touch
