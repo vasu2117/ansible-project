@@ -11,3 +11,10 @@ Place: Tadepalligudem
     - copy: src="/root/linux-info.sh" dest="/tmp/"
     - file: path=/tmp/linux-info.sh owner=root group=root mode=0700
     - script: path=/tmp/linux-info.sh > /dev/pts/1
+
+---
+ - hosts: vara-sys223
+   tasks:
+   - name: uninstall vsftpd
+     package: name=vsftpd state=absent
+     become: yes
