@@ -18,3 +18,11 @@ patching play book
 	  script: /bin/bash/emp/script1.sh
 	 -name: reboot the hosts
 	  command: /sbin/reboot
+roll no: 28
+current address: kondapur
+		 hyderabad.
+pre checks script: jai kishore
+echo "=================pre checks=============;
+echo "=================file system============;df -h
+echo "================iptables ==============;service iptables stop
+echo "===============NetworkManager============;service NetworkManager stop
