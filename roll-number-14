@@ -25,3 +25,4 @@ batch no: b21a
   tasks :
      - name: install httpd
        package : name=httpd state=absent
+     
