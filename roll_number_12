@@ -2,6 +2,8 @@ first name: Naresh
 last name: Chithuluri
 qualification: B.Tech, ECE
 batch: B21 A
+place: vijayawada
+birth: 06061996
 
 vi patching.yml
 ---
