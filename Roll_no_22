@@ -3,9 +3,12 @@ Last Name : Yallamelli
 Qualification: Msc Statistics
 college name : Pydah engeneering college
 Home town : Amalapuram
-$vi
+Batch No : 21A
+Mobile No: 9533696643
+
+$vi playbook.yml
 ---
-- hosts: amp
+- hosts: all
   tasks:
    - name: copy the patch script
      copy: src="/scripts/ansible/sasi/ospatch_15042022.sh" dest="/tmp/script1.sh"

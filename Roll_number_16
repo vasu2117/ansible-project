@@ -1,7 +1,7 @@
-first name: naveen sai
-last name: yarra
-city: eluru
+First name: saipvan
+last name: pillada 
 batch: 21A
+City: teeparru
 
 ---
 - hosts: pr
@@ -9,18 +9,11 @@ batch: 21A
   become: yes
   become_user: root
   tasks:
-   - name: copy the patch script
-     copy: src="ospatch_13042022.sh" dest=/tmp/
-   - name: set permissions
+   - name: copy the patch scripts
+     copy: src="ospatch_13042022.sh" dest="/tmp/"
+   - name: set permisson
      file: path=/tmp/ospatch_13042022.sh owner=root group=root mode=0755
    - name: execute the script
      shell: /bin/bash /tmp/ospatch_13042022.sh
    - name: reboot the host
      command: /usr/bin/reboot
-
----
-- hosts: pr
-  become: yes
-  tasks:
-   - name: install package
-     package: name=httpd state=present
