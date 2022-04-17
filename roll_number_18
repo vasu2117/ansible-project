@@ -29,5 +29,15 @@ Patching script:
     tasks:
      - package: name="httpd" state="present"
      - service: name="httpd" state="started"
+ httpd service start:
+ 
+ ---
+ - hosts: dev
+   remote_user: ansible
+   become_user: root
+   become: yes
+   tasks:
+    - name: service restart
+      service: name=httpd state=restarted
   
   
