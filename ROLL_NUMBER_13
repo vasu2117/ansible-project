@@ -6,6 +6,8 @@ city: guntur
 tome town : tanuku
 institue : varains
 batch : 21A
+village :duvva
+hii this is prakash
 present address : kondapur, hyderabad
 ---
 - hosts: all
