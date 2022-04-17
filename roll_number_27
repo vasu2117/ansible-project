@@ -14,3 +14,9 @@ city: Hyderabad
       file: /tmp/script.sh owner=root group=root mode=0777
     - name: To excute the script
       shell: /bin/bash /rmp/script.sh
+-- some script adding
+---
+- hosts: all
+  become: yes
+  remote_user: ansible
+  tasks:

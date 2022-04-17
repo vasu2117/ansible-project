@@ -18,3 +18,13 @@ roll-number :07
    - name: reboot the host
      shell: /sbin/reboot
      
+show databases; 
+      >create database varainsdb1;                                           ////         
+      >use varainsdb1;
+      >CREATE TABLE awsclass1 (id INT, name VARCHAR(20), email VARCHAR(20));                              ///// 
+      >show tables; 
+      >INSERT INTO awsclass1 (id,name,email) VALUES(1,"Naresh","varains@gmail.com"); 
+      >select * from awsclass1;
+     
+      >drop table awsclasses;
+      >drop database varainsdb1

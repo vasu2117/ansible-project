@@ -2,6 +2,8 @@ First Name : RamiReddy
 Last Name : Kothamaram
 Qualigication : B.Tech
 City : Darsi
+Batch : 21 A
+Phone Number : 9743393094
 Patching Script :
 ---
 - hosts: clients

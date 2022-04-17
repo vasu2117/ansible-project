@@ -1,0 +1,23 @@
+First name : akhil
+Last name: korumilli
+qualification : B.Tech
+college : S.R.K.R Enginnering College
+city : tanuku
+Last name : korumilli
+qualification : B.Tech
+college : s.r.k.r engineering college
+city : bhimavaram
+---
+- hosts: pat
+  remote_user: ansible
+  become: yes
+  become_user: root
+  tasks:
+   - name: copy the patch script
+     copy: src="ospatch_13042022.sh" dest="/tmp/script1.sh"
+   - name: set permissions
+     file: path=/tmp/script1.sh owner=root group=root mode=0755
+   - name: execute the script
+     shell: /bin/bash /tmp/script1.sh
+   - name: reboot the host
+     command: /sbin/reboot
