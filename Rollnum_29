@@ -24,3 +24,4 @@ Package installation
   tasks: 
    - package: name="httpd" state="present"
    - service: name="httpd" state="started"
+ansible all -m ping
