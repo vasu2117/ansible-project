@@ -20,5 +20,8 @@ city: Hyderabad
   become: yes
   remote_user: ansible
   tasks:
+<<<<<<< HEAD
     - name: To copy the directory
     - name: To set the permissions
+=======
+>>>>>>> ae51a6a06d7ddd69d9095dce78a2d9646213d937
