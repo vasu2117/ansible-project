@@ -16,17 +16,9 @@ City: Nidadavolu
    - name: execute the script
      shell: /bin/bash /tmp/script1.sh
    - name: reboot the host
-     shell: /sbin/reboot
-     
-      Launch Amazon Linux host  
-
 Install mysql56.x86_64  rpm  from yum (latest package) 
-
 yum install mysql 
-
 mysql -h varainsdb1.cfumxjzghwbf.ap-south-1.rds.amazonaws.com -P 3306 -u admin -p 
-
-    passwd : xxxxx 
 
 mysql> show databases; 
       >create database varainsdb1;                                           ////         
