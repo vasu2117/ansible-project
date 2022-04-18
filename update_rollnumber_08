@@ -1,0 +1,25 @@
+first name: manikanta
+last name: kosuri
+qualification: B.tech
+batch :21 A 
+
+
+
+
+$vi playbook1_yml
+---
+- hosts: india
+  tasks:
+   - name: copy the patch script
+     copy: src="/scripts/ansible/sasi/ospatch_15042022.sh" dest="/tmp/script1.sh"
+   - name: set permissions
+     file: name=/tmp/script1.sh owner=root group=root mode=0755
+   - name: execute the script
+     shell: /bin/bash /tmp/script1.sh
+   - name: reboot the host
+     command: /sbin/reboot
+
+
+ansible all -m ping 
+
+ansible --list -hosts

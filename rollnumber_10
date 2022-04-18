@@ -1,5 +1,9 @@
+HI
+THIS IS MY PERSONAL DETAILS
 First name:Naga Mahesh
 Last name:korasikha
+qualification:B.tech
+city: tadepalligudem
 roll number:2110
 batch:21 A
 
@@ -13,3 +17,13 @@ creating the ansible playbook for patching the servers
      file: name=/tmp/script1.sh owner=root group=root mode=0755
    - name: executu the script
      shell: /bin/bash /tmp/script1.sh
+     
+     creating the ansible playbook for httpd package install
+     ---
+ - hosts: vlab
+   remote_user: ansible
+   become: yes
+   become_user: root
+   tasks:
+    - name: install httpd
+      yum: name=httpd   state=present

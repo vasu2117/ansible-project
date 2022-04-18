@@ -1,8 +1,10 @@
-First Name : Srinivas
-Last Name : Vanapalli
-Qualigication : M.Tech
-City : Tanuku
-Marital Status: Un-Married
+First Name : RamiReddy
+Last Name : Kothamaram
+Qualigication : B.Tech
+City : Darsi
+Batch : 21 A
+Phone Number : 9743393094
+Married : No
 Patching Script :
 ---
 - hosts: clients
@@ -18,5 +20,3 @@ Patching Script :
      script: /home/ansible/ospatch_13042022.sh
    - name: reboot the host
      command: /sbin/reboot
-Patching Status Script : 
-echo "13042022 patch bundle applied successfully" > /root/ospatch_status

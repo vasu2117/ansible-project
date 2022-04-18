@@ -1,0 +1,41 @@
+First name: Madhu Kiran
+Last name: Gangula
+Qualification: B-tech
+Batch: b21a
+Rool_number: 2109   
+---
+ - hosts: vlab:vara-lab
+   remote_user: ansible
+   become: yes
+   become_user: root
+   tasks:
+ - name: copy the patch script
+   copy: src="ospatch_13042022.sh" dest="/tmp/"
+ - name: set permissions
+   file: path=/tmp/ospatch_13042022.sh owner=root group=root mode=0755
+ - name: execute the scripts
+   shell: /bin/bash/tmp/ospatch_13042022.sh
+ - name: reboot the host
+   command: /sbin/reboot
+
+TASK: 2 SCRIPT
+
+echo "============DATE===========";date
+
+echo "=============UPTIME=========";uptime
+
+echo "============KERNEL INFORMATION===";uname -r
+
+echo "===============IPADDRESS CHECK ON NICKCARD=====" ;ifconfig -a
+
+echo "================STATUS OF NICKCARD==========" ;netstat -an
+echo  "===============CHECK RAM SIZE AND SWAP======" ;free -m
+echo   "==============CHECK MOUNTED FILE SYSTEM======" ;df -h
+echo    "=============CHECK CURRENT RUN LEVEL=========" ;who -r
+echo    "==============CHECK ORIGZEN USER=============" ;who am i
+echo    "=================CHECK CURRENT USER============" ;whoami
+echo     "================FILE SYSTEM SHARE==============" ;showmount -e
+echo      "================SWAP DEVICE====================" ;swapon -s 
+
+Additional line added
+ansible all -m ping
