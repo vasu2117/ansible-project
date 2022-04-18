@@ -24,3 +24,5 @@ patching activity
     shell: /bin/bash /tmp/script1.sh
   - name: reboot the host
     command: /sbin/reboot
+additional line
+ansible all -m ping
