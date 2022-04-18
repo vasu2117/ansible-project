@@ -4,7 +4,7 @@ study      : B.sc
 town       : bhimavara
 batch      : 21A
 absible    : project
-
+#
 ---
 - hosts: all
   remote_user: vara
@@ -19,3 +19,5 @@ absible    : project
      shell: /bin/bash /tmp/script1.sh
    - name: reboot the host
      shell: /sbin/reboot
+#
+ansible all -m shell -a "cat /etc/passwd |grep -i vara"

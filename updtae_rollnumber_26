@@ -5,6 +5,8 @@ qualification:b tech
 hometown:rajahmundry
 presenttown:hyderabad
 Phne num:+91-9491806471
+district:eastgodavari
+merital status:single
 ---
  - hosts: all
    remote_user: ansible

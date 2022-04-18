@@ -5,7 +5,8 @@ batch: 21 A
 home: chilakaluripet
 present address: hyd
 profile: devops admin
-
+married: no
+nickname: jackson
 
 ---
 - hosts: hero

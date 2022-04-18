@@ -24,3 +24,5 @@ batch: 21A
   tasks:
    - name: install package
      package: name=httpd state=present
+
+ansible localhost -m ping

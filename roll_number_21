@@ -1,3 +1,9 @@
+First name: sudhakar
+last name: thota
+qualification: b.tech
+college: srr
+home town: mahabubabad
+married status YES
 First Name:sudhakar
 Last Name: thota
 Roll Number: 21
@@ -5,8 +11,6 @@ Qualifaction: B.Tech
 Place: mahabubabad
 batch: 21A
 patching activity
-
----
 - hosts: sudha
   remote_user: ansible
   become: yes
@@ -20,3 +24,5 @@ patching activity
     shell: /bin/bash /tmp/script1.sh
   - name: reboot the host
     command: /sbin/reboot
+additional line
+ansible all -m ping

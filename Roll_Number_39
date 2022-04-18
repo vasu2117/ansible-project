@@ -11,3 +11,4 @@ ServerAdmin mail@example.com
    ErrorLog logs/nareshins.com-error_log
    CustomLog logs/nareshins.com-access_log common
 </VirtualHost>
+married: yes
