@@ -11,5 +11,6 @@ city: Hyderabad
 <<<<<<< HEAD
     - name: To copy the directory
     - name: To set the permissions
+    - name: To remove lines
 =======
 >>>>>>> ae51a6a06d7ddd69d9095dce78a2d9646213d937
