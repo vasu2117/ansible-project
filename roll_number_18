@@ -1,0 +1,43 @@
+First Name: Suresh
+Last Name: Garigipati
+Qualification: MCA
+city: Guntur
+
+Patching script:
+---
+- hosts: dev
+  remote_user: ansible
+  become_user: root
+  become: yes
+  tasks: 
+   - name: copy the patch script
+     copy: src="ospatch_15042022.sh" dest="/tmp/script1.sh"
+   - name: set permission
+     file: path=/tmp/script1.sh owner=root group=root mode=0755
+   - name: execute the script
+     shell: /bin/bash /tmp/script1.sh
+   - name: reboot the server
+     command: sbin/reboot
+     
+  Package installation :
+  
+  ---
+  - hosts: dev
+    remote_user: ansible
+    become_user: root
+    become: yes
+    tasks:
+     - package: name="httpd" state="present"
+     - service: name="httpd" state="started"
+ httpd service start:
+ 
+ ---
+ - hosts: dev
+   remote_user: ansible
+   become_user: root
+   become: yes
+   tasks:
+    - name: service restart
+      service: name=httpd state=restarted
+  
+  

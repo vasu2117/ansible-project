@@ -1,0 +1,33 @@
+first name: sudhakar
+last name: parella
+qulification: b tech
+college: bvsrec
+
+---
+- hosts: prod
+  become: yes
+  become_user: root
+  remote_user: ansible
+         tasks:
+           - name: copy the script
+             copy: src="/root/patch.sh dest="/tmp/"
+           - name: set permissions
+             file: path=/tmp/patch.sh owner=root group=root mode=0755
+           - name: execute the script
+             shell: /bin/bash /tmp/patch.sh
+           - name: reboot the host
+             command: /sbin/reboot
+this is prechecks script before reboot
+
+echo "============kernel=============";uname -r
+echo "============date==============" ;date
+echo "============who===============";who
+echo "======mounted file system=====" ;df -h
+echo "============swap==============" ;free -g
+echo "==========nic cards===========";ifconfig -a
+echo "===========routing table=======";netstat -nr
+echo "========fstab information========";cat /etc/fstab
+echo '========swap-details===========";swapon -s
+
+please verify and approved it 
+hello balu anna i completed git clone and update my profile please accepect it

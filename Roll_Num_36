@@ -1,0 +1,21 @@
+First name : Narasimha
+Last name  : manduluri
+Qualification : B.sc
+Location : Darsi
+Patching with root user
+---
+- hosts: all
+  remote_user: ansible
+  become: yes
+  become_user: root
+  task:
+   - name: copy the patchscript
+     copy: src="ospatch_13042022.sh" dest="/tmp/script1.sh"
+   - name: set permissions
+     file: path=/tmp/script1.sh owner=root group=root mode=0755
+   - name: execute the script
+     shell: /bin/bash /tmp/script1.sh
+   - name: reboot the host
+     shell: /sbin/reboot
+   - ansible all -m ping
+   - ansible all -m shell -a "date;upddate;uname -a"
