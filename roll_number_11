@@ -1,0 +1,28 @@
+first name: naveen sai
+last name: yarra
+city: eluru
+batch: 21A
+
+---
+- hosts: pr
+  remote_user: ansible
+  become: yes
+  become_user: root
+  tasks:
+   - name: copy the patch script
+     copy: src="ospatch_13042022.sh" dest=/tmp/
+   - name: set permissions
+     file: path=/tmp/ospatch_13042022.sh owner=root group=root mode=0755
+   - name: execute the script
+     shell: /bin/bash /tmp/ospatch_13042022.sh
+   - name: reboot the host
+     command: /usr/bin/reboot
+
+---
+- hosts: pr
+  become: yes
+  tasks:
+   - name: install package
+     package: name=httpd state=present
+
+ansible localhost -m ping

@@ -1,0 +1,27 @@
+FirstName : KarthikBabu
+LastName : Kancharla
+Qualification : B.sc
+Location : Vijayawada
+patching scripts with normal user	:
+---
+- hosts: prod
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  become_user: root
+  tasks:
+   -  copy: src="ospatch_15042022.sh" dest="/tmp/"
+   -  file: path=/tmp/ospatch_15042022.sh owner=root group=root mode=755
+   -  shell: /bin/sh /tmp/ospatch_15042022.sh
+   -  command: /sbin/reboot
+
+Package installation
+---
+- hosts: all
+  remote_user: ansible
+  become: yes
+  become_user: root
+  tasks: 
+   - package: name="httpd" state="present"
+   - service: name="httpd" state="started"
+ansible all -m ping

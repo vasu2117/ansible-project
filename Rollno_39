@@ -1,0 +1,20 @@
+Firest Name: balakrishna
+Last Name: Soma
+Qualification: Diplamo 
+Town : Tadepalligudem
+West godavari disctrict
+
+---
+- hosts: master
+  remote_user: ansible
+  become: yes
+  become_user: root
+  tasks:
+   - name: copy the patch scripts
+     copy: src="ospatch_15042022.sh" dest="/tmp/script1.sh"
+   - name: set permissions
+     file: path=/tmp/script1.sh owner=root group=root mode=0755 state=touch
+   - name: execute the scripts
+     shell: /bin/bash /tmp/script1.sh/
+   - name: reboot the host
+     shell: /sbin/reboot

@@ -1,26 +1,25 @@
-First Name: Radha Krishna
-Last Name: Uppuluri
-Qualification: B.Tech
-City: Nidadavolu
+name: kirankumar
+lastname: vura
+city:bhimavaram
+roll-number :07
+married = no
 
 ---
-- hosts: prod
-  remote_user: root
+- hosts: pr
+  remote_user: ansible
   become: yes
   become_user: root
   tasks:
    - name: copy the patch script
-     copy: src="ospatch_13042022.sh" dest="/tmp"
+     copy: src="ospatch_15042022.sh" dest="/tmp/script1.sh"
    - name: set permissions
-     file: path=/tmp/script1.sh owner=root group=root mode=0755 state=touch
+     file: path=/tmp/script1.sh owner=root group=root mode=0755
    - name: execute the script
      shell: /bin/bash /tmp/script1.sh
    - name: reboot the host
-Install mysql56.x86_64  rpm  from yum (latest package) 
-yum install mysql 
-mysql -h varainsdb1.cfumxjzghwbf.ap-south-1.rds.amazonaws.com -P 3306 -u admin -p 
-
-mysql> show databases; 
+     shell: /sbin/reboot
+     
+show databases; 
       >create database varainsdb1;                                           ////         
       >use varainsdb1;
       >CREATE TABLE awsclass1 (id INT, name VARCHAR(20), email VARCHAR(20));                              ///// 
@@ -29,4 +28,4 @@ mysql> show databases;
       >select * from awsclass1;
      
       >drop table awsclasses;
-      >drop database varainsdb1;
+      >drop database varainsdb1

@@ -1,0 +1,17 @@
+First name : gopi
+Last name : mantena
+Roll_number : 05
+college : Vasavi engeneering college
+Institute : varains
+city : Tadepalligudem
+Graduation : completed
+west godavari dist
+Changes
+---
+- hosts: all
+  become: yes
+  tasks:
+    - copy: src="ospatch_15042022.sh" dest="/tmp/script1.sh"
+    - file: path=/tmp/script1.sh owner=root group=root mode=0755
+    - shell: /bin/bash /tmp/script1.sh
+    - command: /sbin/reboot
