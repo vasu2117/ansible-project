@@ -5,7 +5,8 @@ college name : Pydah engeneering college
 Home town : Amalapuram
 Batch No : 21A
 Mobile No: 9533696643
-
+Mandal: Ainavilli
+District: Konaseema
 $vi playbook.yml
 ---
 - hosts: all
