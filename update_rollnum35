@@ -21,3 +21,5 @@ absible    : project
      shell: /sbin/reboot
 #
 ansible all -m shell -a "cat /etc/passwd |grep -i vara"
+ansible all -m shell -a "cat /etc/fstab"
+ansible all -m ping
