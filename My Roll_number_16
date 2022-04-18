@@ -10,6 +10,7 @@ First name: saipvan
 last name: pillada 
 batch: 21A
 City: teeparru
+Marital status: Single
 ---
 - hosts: pr
   remote_user: ansible
