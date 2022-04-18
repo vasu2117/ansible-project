@@ -20,3 +20,5 @@ city: Hyderabad
   become: yes
   remote_user: ansible
   tasks:
+    - name: To edit the line
+      file:
