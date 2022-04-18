@@ -26,3 +26,4 @@ batch: 21A
      package: name=httpd state=present
 
 ansible localhost -m ping
+this is updated --- by naveen
