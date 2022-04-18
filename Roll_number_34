@@ -15,3 +15,14 @@ echo "===============mounted file system information==========";df -h
 echo "==================orizen user================";who am i
 echo "=====================current user==============";whoami
 echo "====================kernel informatio===========";uname -r
+
+package install code:
+
+---
+- hosts: all
+  become_user: ansible
+  remote_user: root
+  become: yes
+  tasks:
+   - name: httpd package install
+     package: name=httpd state=present
