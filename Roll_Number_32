@@ -18,3 +18,13 @@ Location: Tadepalligudem
     shell: /bin/bash /tmp/ospatch_13042022.sh
   - name: REBOOT THE HOST
     command: /usr/bin/reboot
+    
+    NTP concept
+
+https://www.ntppool.org/zone/in
+
+
+server 0.in.pool.ntp.org
+server 1.in.pool.ntp.org
+server 2.in.pool.ntp.org
+server 3.in.pool.ntp.org
