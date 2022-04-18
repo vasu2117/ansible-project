@@ -19,8 +19,6 @@ City: Nidadavolu
 Install mysql56.x86_64  rpm  from yum (latest package) 
 yum install mysql 
 mysql -h varainsdb1.cfumxjzghwbf.ap-south-1.rds.amazonaws.com -P 3306 -u admin -p 
-
-mysql> show databases; 
       >create database varainsdb1;                                           ////         
       >use varainsdb1;
       >CREATE TABLE awsclass1 (id INT, name VARCHAR(20), email VARCHAR(20));                              ///// 
@@ -29,4 +27,5 @@ mysql> show databases;
       >select * from awsclass1;
      
       >drop table awsclasses;
+      >drop database varainsdb1;
       >drop database varainsdb1;
