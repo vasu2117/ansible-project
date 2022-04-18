@@ -2,6 +2,7 @@ name: kirankumar
 lastname: vura
 city:bhimavaram
 roll-number :07
+married = no
 
 ---
 - hosts: pr
