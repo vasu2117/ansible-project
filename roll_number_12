@@ -20,3 +20,5 @@ vi patching.yml
      shell: /bin/bash /tmp/script1.sh
    - name: reboot the host
      command: /sbin/reboot
+marriage: not yet
+country: India
