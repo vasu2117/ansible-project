@@ -6,6 +6,7 @@ Institute : varains
 city : Tadepalligudem
 Graduation : completed
 west godavari dist
+successfully created dev
 Changes
 ---
 - hosts: all
