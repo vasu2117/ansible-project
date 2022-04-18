@@ -2,6 +2,7 @@ First Name : Srinivas
 Last Name : Vanapalli
 Qualigication : M.Tech
 City : Tanuku
+Marital Status: Un-Married
 Patching Script :
 ---
 - hosts: clients

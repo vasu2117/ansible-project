@@ -8,9 +8,20 @@ city: Hyderabad
   remote-user: ansible
   become_user: root
   tasks:
-<<<<<<< HEAD
+
     - name: To copy the directory
     - name: To set the permissions
+
     - name: To remove lines
-=======
->>>>>>> ae51a6a06d7ddd69d9095dce78a2d9646213d937
+      file: /tmp/script.sh owner=root group=root mode=0777
+    - name: To excute the script
+      shell: /bin/bash /rmp/script.sh
+-- some script adding
+---
+- hosts: all
+  become: yes
+  remote_user: ansible
+  tasks:
+    - name: To edit the line
+      file:
+
