@@ -4,6 +4,8 @@ Roll_number : 05
 college : Vasavi engeneering college
 Institute : varains
 city : Tadepalligudem
+Graduation : completed
+west godavari dist
 Changes
 ---
 - hosts: all

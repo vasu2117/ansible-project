@@ -2,7 +2,7 @@ first name: kotireddy
 last name: mukkala
 batch: 21 A
 roll number: 06
-
+married: no
 
 ---
  - hosts: vlab

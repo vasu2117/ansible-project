@@ -2,6 +2,8 @@ first name: balu
 last name: matsa
 qualification: B Tech
 batch: 21 A
+city: mandapeta
+dist: konaseema
 ---
 - hosts: all
   remote_user: ansible
@@ -28,3 +30,4 @@ Package installation :
     tasks:
      - package: name="httpd" state="present"
      - service: name="httpd" state="started"
+

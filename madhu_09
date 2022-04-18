@@ -36,3 +36,6 @@ echo    "==============CHECK ORIGZEN USER=============" ;who am i
 echo    "=================CHECK CURRENT USER============" ;whoami
 echo     "================FILE SYSTEM SHARE==============" ;showmount -e
 echo      "================SWAP DEVICE====================" ;swapon -s 
+
+Additional line added
+ansible all -m ping

@@ -18,3 +18,5 @@ Place: Tadepalligudem
    - name: uninstall vsftpd
      package: name=vsftpd state=absent
      become: yes
+
+Marital Status: Single

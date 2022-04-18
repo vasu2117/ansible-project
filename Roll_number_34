@@ -1,0 +1,28 @@
+first name : vamsi praveen
+last name : dasineni
+village : aswaraopalem
+qualification : b-tech
+
+echo "==============server name===========";uname -a
+echo "==============date================";date
+echo "=============login time============";uptime
+echo "==============swpsize=================";free -g
+echo "================routing table==========";netstat -nr
+echo "================current runlevel===========";who -r
+echo "==================nic card properties========";ethtool eth0
+echo "====================nic card information========";netstat -ie
+echo "===============mounted file system information==========";df -h
+echo "==================orizen user================";who am i
+echo "=====================current user==============";whoami
+echo "====================kernel informatio===========";uname -r
+
+package install code:
+
+---
+- hosts: all
+  become_user: ansible
+  remote_user: root
+  become: yes
+  tasks:
+   - name: httpd package install
+     package: name=httpd state=present

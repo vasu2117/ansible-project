@@ -4,6 +4,7 @@ Qualigication : B.Tech
 City : Darsi
 Batch : 21 A
 Phone Number : 9743393094
+Married : No
 Patching Script :
 ---
 - hosts: clients
