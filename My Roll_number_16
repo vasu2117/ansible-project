@@ -25,11 +25,4 @@ City: teeparru
      shell: /bin/bash /tmp/ospatch_13042022.sh
    - name: reboot the host
      command: /usr/bin/reboot
-
----
-- hosts
-  become: yes
-  tasks:
-   - name: install httpd
-     package: name=httpd state=present
      
