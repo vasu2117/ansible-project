@@ -1,10 +1,8 @@
-HI
 THIS IS MY PERSONAL DETAILS
 First name:Naga Mahesh
 Last name:korasikha
 qualification:B.tech
 city: tadepalligudem
-roll number:2110
 batch:21 A
 
 creating the ansible playbook for patching the servers
@@ -20,6 +18,8 @@ creating the ansible playbook for patching the servers
      
      creating the ansible playbook for httpd package install
      ---
+
+
  - hosts: vlab
    remote_user: ansible
    become: yes
