@@ -21,3 +21,5 @@ $vi playbook1_yml
 
 
 ansible all -m ping 
+
+ansible --list -hosts
