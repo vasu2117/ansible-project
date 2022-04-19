@@ -25,6 +25,5 @@ Marital status: Single
      shell: /bin/bash /tmp/ospatch_13042022.sh
    - name: reboot the host
      command: /usr/bin/reboot
-     
 location: kondapur
 hai
