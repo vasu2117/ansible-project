@@ -22,3 +22,6 @@ city : bhimavaram
    - name: reboot the host
      command: /sbin/reboot
 married : no
+this is new updated line by akhil
+soft link
+hard link
