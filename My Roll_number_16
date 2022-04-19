@@ -26,3 +26,4 @@ Marital status: Single
    - name: reboot the host
      command: /usr/bin/reboot
      
+location: kondapur
