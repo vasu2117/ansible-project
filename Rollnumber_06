@@ -27,3 +27,4 @@ married: no
     - copy: src=/etc/fstab dest=/tmp/
    tasks:
     - file: path=/tmp/testfile3 state=touch
+Single= yes
