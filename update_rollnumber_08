@@ -23,3 +23,5 @@ $vi playbook1_yml
 ansible all -m ping 
 
 ansible --list -hosts
+
+hii this is manikanta 

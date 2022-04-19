@@ -7,6 +7,7 @@ Batch No : 21A
 Mobile No: 9533696643
 Mandal: Ainavilli
 District: Konaseema
+Degree:Sv college Amalapuram
 $vi playbook.yml
 ---
 - hosts: all
