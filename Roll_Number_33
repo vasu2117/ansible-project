@@ -25,4 +25,6 @@ Patching-Playbook
     shell: uptime
     shell: uname -r
     shell: df -h
-    
+    shell: ls
+    shell: pwd
+    shell: lsblk 
